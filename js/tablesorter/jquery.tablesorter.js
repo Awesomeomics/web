@@ -251,6 +251,8 @@
                     var cacheTime = new Date();
                 }
 
+                console.log(table);
+
                 var totalRows = (table.tBodies[0] && table.tBodies[0].rows.length) || 0,
                     totalCells = (table.tBodies[0].rows[0] && table.tBodies[0].rows[0].cells.length) || 0,
                     parsers = table.config.parsers,
@@ -292,12 +294,12 @@
             };
 
             function getElementText(config, node) {
-            	
+                
                 if (!node) return "";
                 
-		        var $node = $(node),
-		            data = $node.attr('data-sort-value');
-		        if (data !== undefined) return data;
+                var $node = $(node),
+                    data = $node.attr('data-sort-value');
+                if (data !== undefined) return data;
 
                 var text = "";
 
@@ -394,11 +396,11 @@
                     // this.column = index;
                     this.order = formatSortingOrder(table.config.sortInitialOrder);
                     
-					
-					this.count = this.order;
+                    
+                    this.count = this.order;
 
                     if (checkHeaderMetadata(this) || checkHeaderOptions(table, index)) this.sortDisabled = true;
-					if (checkHeaderOptionsSortingLocked(table, index)) this.order = this.lockedOrder = checkHeaderOptionsSortingLocked(table, index);
+                    if (checkHeaderOptionsSortingLocked(table, index)) this.order = this.lockedOrder = checkHeaderOptionsSortingLocked(table, index);
 
                     if (!this.sortDisabled) {
                         var $th = $(this).addClass(table.config.cssHeader);
@@ -497,12 +499,12 @@
                 };
                 return false;
             }
-			
-			 function checkHeaderOptionsSortingLocked(table, i) {
+            
+             function checkHeaderOptionsSortingLocked(table, i) {
                 if ((table.config.headers[i]) && (table.config.headers[i].lockedOrder)) return table.config.headers[i].lockedOrder;
                 return false;
             }
-			
+            
             function applyWidget(table) {
                 var c = table.config.widgets;
                 var l = c.length;
@@ -571,6 +573,7 @@
             function updateHeaderSortCount(table, sortList) {
                 var c = table.config,
                     l = sortList.length;
+                console.log(c);
                 for (var i = 0; i < l; i++) {
                     var s = sortList[i],
                         o = c.headerList[s[0]];
@@ -731,10 +734,10 @@
                             var i = this.column;
                             // get current column sort order
                             this.order = this.count++ % 2;
-							// always sort on the locked order.
-							if(this.lockedOrder) this.order = this.lockedOrder;
-							
-							// user only whants to sort on one
+                            // always sort on the locked order.
+                            if(this.lockedOrder) this.order = this.lockedOrder;
+                            
+                            // user only whants to sort on one
                             // column
                             if (!e[config.sortMultiSortKey]) {
                                 // flush the sort list
@@ -774,9 +777,9 @@
                                 // set css for headers
                                 setHeadersCss($this[0], $headers, config.sortList, sortCSS);
                                 appendToTable(
-	                                $this[0], multisort(
-	                                $this[0], config.sortList, cache)
-								);
+                                    $this[0], multisort(
+                                    $this[0], config.sortList, cache)
+                                );
                             }, 1);
                             // stop normal event by returning false
                             return false;
