@@ -14,11 +14,8 @@
   <div class="off-canvas-wrap" data-offcanvas>
    <div class="inner-wrap">
  	<nav class="tab-bar">
- 	 <div class="left-small">
- 	  <a href="#filters" role="button" aria-controls="filters" aria-expanded="false" class="left-off-canvas-toggle menu-icon" ><span></span></a>
- 	 </div>
 
- 	 <section class="middle tab-bar-section">
+ 	 <section class="middle tab-bar-section large-11 push-2 columns">
  	  <img src="img/navbar.png">
  	 </section>
 
@@ -26,105 +23,106 @@
  	  <a href="#settings" role="button" aria-controls="settings" aria-expanded="false" class="right-off-canvas-toggle menu-icon" ><span></span></a>
  	 </section>
  	</nav>
+  
 
- 	<nav class="left-off-canvas-menu" id="filters">
- 	 <ul class="off-canvas-list">
- 	  <li><label>Fun table manipulation!</label></li>
- 	  <li><a href="#" data-reveal-id="genome">Add a genome</a></li>
-    <li><label>Filters</label></li>
- 	  <li><a href="#">Dynamic filter</a></li>
- 	  <li><a href="#">Dynamic filter 2</a></li>
-      <li><a href="#">Dynamic filter 3</a></li>
-      <li><a href="#">Dynamic filter 4</a></li>
-      <li><a href="#">Dynamic filter 5</a></li>
- 	 </ul>
- 	</nav>
-
- 	<nav class="right-off-canvas-menu" id="settings">
- 	 <ul class="off-canvas-list">
- 	  <li><label>Settings</label></li>
- 	  <li><a href="#">Preferences</a></li>
- 	  <li><a href="#">Account</a></li>
+  <nav class="right-off-canvas-menu" id="settings">
+   <ul class="off-canvas-list">
+    <li><label>Settings</label></li>
+    <li><a href="#">Preferences</a></li>
+    <li><a href="#">Account</a></li>
       <li><a href="#">Logout</a></li>
- 	 </ul>
- 	</nav>
-
-	<div id="genome" class="reveal-modal radius" data-reveal>
-	  <h2>Upload a new file</h2>
-	  <!-- api integration can go here -->
-	  <form>
-      <input class="button radius" type="file">
-    </form>
-	  <a class="close-reveal-modal">&#215;</a>
-	</div>
-
- 	<section class="main-section">
- 			<!-- main content goes here --> 
- 	 <div style="height:59rem; margin-top:5em;" class="row">
-    <div class="large-12 medium-12 columns text-center">
-     <table id="myTable" class="tablesorter"> 
-      <thead> 
-        <tr> 
-          <th>Last Name</th> 
-          <th>First Name</th> 
-          <th>Email</th> 
-          <th>Due</th> 
-          <th>Web Site</th> 
-        </tr> 
-      </thead> 
-      <tbody> 
-        <tr> 
-          <td>Smith</td> 
-          <td>John</td> 
-          <td>jsmith@gmail.com</td> 
-          <td>$50.00</td> 
-          <td>http://www.jsmith.com</td> 
-        </tr> 
-        <tr> 
-          <td>Bach</td> 
-          <td>Frank</td> 
-          <td>fbach@yahoo.com</td> 
-          <td>$50.00</td> 
-          <td>http://www.frank.com</td> 
-        </tr> 
-        <tr> 
-          <td>Doe</td> 
-          <td>Jason</td> 
-          <td>jdoe@hotmail.com</td> 
-          <td>$100.00</td> 
-          <td>http://www.jdoe.com</td> 
-        </tr> 
-        <tr> 
-          <td>Conway</td> 
-          <td>Tim</td> 
-          <td>tconway@earthlink.net</td> 
-          <td>$50.00</td> 
-          <td>http://www.timconway.com</td> 
-        </tr> 
-      </tbody> 
-    </table>
-    
+   </ul>
+  </nav>
+ 	
+  <div class="row">
+    <nav class="side-nav large-2 columns left">
+   	 <ul class="side-nav text-center" >
+   	  <li><label id="sidenav">Fun table manipulation!</label></li>
+   	  <li><a href="#" data-reveal-id="genome">Add a genome</a></li>
+      <li><label id="sidenav">Filters</label></li>
+   	  <li><a href="#">Dynamic filter</a></li>
+   	  <li><a href="#">Dynamic filter 2</a></li>
+        <li><a href="#">Dynamic filter 3</a></li>
+        <li><a href="#">Dynamic filter 4</a></li>
+        <li><a href="#">Dynamic filter 5</a></li>
+   	 </ul>
+   	</nav>
 
 
-    <script>
-    $(document).ready(function() { 
-        $("#myTable").tablesorter( {
-          sortList: [[0,0], [1,0], [2,0], [3,0], [4,0]]
-        }); 
-    }); 
-     </script>
-    
+
+  	<div id="genome" class="reveal-modal radius" data-reveal>
+  	  <h2>Upload a new file</h2>
+  	  <!-- api integration can go here -->
+  	  <form>
+        <input class="button radius" type="file">
+      </form>
+  	  <a class="close-reveal-modal">&#215;</a>
+  	</div>
+
+   	<section class="main-section">
+   			<!-- main content goes here --> 
+   	 <div style="height:59rem;" class="large-10 push-2 columns">
+       <table id="myTable" class="tablesorter"> 
+        <thead> 
+          <tr> 
+            <th>Last Name</th> 
+            <th>First Name</th> 
+            <th>Email</th> 
+            <th>Due</th> 
+            <th>Web Site</th> 
+          </tr> 
+        </thead> 
+        <tbody> 
+          <tr> 
+            <td>Smith</td> 
+            <td>John</td> 
+            <td>jsmith@gmail.com</td> 
+            <td>$50.00</td> 
+            <td>http://www.jsmith.com</td> 
+          </tr> 
+          <tr> 
+            <td>Bach</td> 
+            <td>Frank</td> 
+            <td>fbach@yahoo.com</td> 
+            <td>$50.00</td> 
+            <td>http://www.frank.com</td> 
+          </tr> 
+          <tr> 
+            <td>Doe</td> 
+            <td>Jason</td> 
+            <td>jdoe@hotmail.com</td> 
+            <td>$100.00</td> 
+            <td>http://www.jdoe.com</td> 
+          </tr> 
+          <tr> 
+            <td>Conway</td> 
+            <td>Tim</td> 
+            <td>tconway@earthlink.net</td> 
+            <td>$50.00</td> 
+            <td>http://www.timconway.com</td> 
+          </tr> 
+        </tbody> 
+      </table>
+      
 
 
-    </div> 
-   </div> 
- 	</section>
+      <script>
+      $(document).ready(function() { 
+          $("#myTable").tablesorter( {
+            sortList: [[0,0], [1,0], [2,0], [3,0], [4,0]]
+          }); 
+      }); 
+       </script>
+      
 
+
+      </div> 
+     </div> 
+   	</section>
  	<a class="exit-off-canvas"></a>
 
-   </div>
   </div>
-
+    </div>
   <script src="js/foundation/foundation.js"></script>
   <script src="js/foundation/foundation.offcanvas.js"></script>
   <script src="js/foundation/foundation.reveal.js"></script>

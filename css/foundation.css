@@ -70,6 +70,14 @@ img {
 img {
   -ms-interpolation-mode: bicubic; }
 
+
+
+#sidenav {
+  background-color:#282626;
+  padding:6px;
+  width:100%;
+}
+
 #map_canvas img,
 #map_canvas embed,
 #map_canvas object,
@@ -109,12 +117,15 @@ select {
   width: 100%; }
 
 .row {
-  width: 100%;
+  width: 100%;  
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 100rem; }
+  max-width: 120rem;
+  max-height:100%;
+   }
+
   .row:before, .row:after {
     content: " ";
     display: table; }
@@ -645,7 +656,7 @@ select {
 
   .push-2 {
     position: relative;
-    left: 16.66667%;
+    left: 14.66667%;
     right: auto; }
 
   .pull-2 {
@@ -765,7 +776,7 @@ select {
 
   .large-push-2 {
     position: relative;
-    left: 16.66667%;
+    left: 14.66667%;
     right: auto; }
 
   .large-pull-2 {
@@ -874,7 +885,7 @@ select {
     width: 8.33333%; }
 
   .large-2 {
-    width: 16.66667%; }
+    width: 14.66667%; }
 
   .large-3 {
     width: 25%; }
@@ -898,7 +909,7 @@ select {
     width: 75%; }
 
   .large-10 {
-    width: 83.33333%; }
+    width: 85.33333%; }
 
   .large-11 {
     width: 91.66667%; }
@@ -985,7 +996,7 @@ select {
 
   .push-1 {
     position: relative;
-    left: 8.33333%;
+    left: %;
     right: auto; }
 
   .pull-1 {
@@ -995,7 +1006,7 @@ select {
 
   .push-2 {
     position: relative;
-    left: 16.66667%;
+    left: 14.66667%;
     right: auto; }
 
   .pull-2 {
@@ -3341,9 +3352,13 @@ ul.pagination {
     display: inline-block; }
 
 .side-nav {
+  position:fixed;
+  width:18em;
+  background-color:#262424;
   display: block;
+  height:100%;
   margin: 0;
-  padding: 0.875rem 0;
+  padding: 0rem 0;
   list-style-type: none;
   list-style-position: outside;
   font-family: 'Oxygen', sans-serif; }
@@ -3352,7 +3367,7 @@ ul.pagination {
     font-size: 0.875rem; }
     .side-nav li a:not(.button) {
       display: block;
-      color: ##84be98;
+      color: #84be98;
       margin: 0;
       padding: 0.4375rem 0.875rem; }
       .side-nav li a:not(.button):hover, .side-nav li a:not(.button):focus {
@@ -4089,6 +4104,7 @@ dialog::backdrop {
       left: -20px;
       right: auto; } }
 .label {
+  width:100%;
   font-weight: normal;
   font-family: 'Oxygen', sans-serif;
   text-align: center;
@@ -4100,7 +4116,7 @@ dialog::backdrop {
   margin-bottom: inherit;
   padding: 0.25rem 0.5rem 0.375rem;
   font-size: 0.6875rem;
-  background-color: ##84be98;
+  background-color: #84be98;
   color: white; }
   .label.radius {
     border-radius: 3px; }
@@ -4219,6 +4235,7 @@ dialog::backdrop {
 .left-off-canvas-menu {
   -webkit-backface-visibility: hidden;
   width: 15.625rem;
+  height:100%;
   top: 0;
   bottom: 0;
   position: absolute;
