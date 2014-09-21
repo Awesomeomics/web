@@ -6,9 +6,11 @@
   <title>Guava Visualizer</title>
   <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="css/typeahead.css">
   <script type="text/javascript" src="js/vendor/modernizr.js"></script>
   <script type="text/javascript" src="js/vendor/jquery.js"></script>
   <script type="text/javascript" src="js/tablesorter/jquery.tablesorter.js"></script>
+  <script src="js/typeahead.bundle.js"></script>
  </head>
  <body>
   <div class="off-canvas-wrap" data-offcanvas>
@@ -46,6 +48,11 @@
       <li><a href="#">Dynamic filter 4</a></li>
       <li><a href="#">Dynamic filter 5</a></li>
       <li><label id="sidenav">Search Disease Phenotypes</label></li>
+      <li>
+        <div id="bloodhound">
+          <input class="typeahead radius" type="text" placeholder="Start typing an HPO term...">
+        </div>
+      </li>
    	 </ul>
    	</nav>
 
@@ -107,13 +114,13 @@
       
 
 
-      <script>
-      $(document).ready(function() { 
-          $("#myTable").tablesorter( {
-            sortList: [[0,0], [1,0], [2,0], [3,0], [4,0]]
-          }); 
-      }); 
-       </script>
+        <script>
+        $(document).ready(function() { 
+            $("#myTable").tablesorter( {
+              sortList: [[0,0], [1,0], [2,0], [3,0], [4,0]]
+            }); 
+        }); 
+         </script>
       
 
 
@@ -128,6 +135,8 @@
   <script src="js/foundation/foundation.offcanvas.js"></script>
   <script src="js/foundation/foundation.reveal.js"></script>
   <!-- Other JS plugins can be included here -->
+
+  <script src="js/typeahead-hpo.js"></script>
 
   <script>
     $(document).foundation();
