@@ -1,0 +1,182 @@
+
+<div class="jumbotron">
+<div class="container translucentbackground">
+    <div class="row colored">
+
+        <div id="contentdiv" class="contcustom">
+            <span class="fa fa-spinner bigicon"></span>
+            <div class="container aLittlePadding"> <img src="img/navbar.png"> </div>
+            <div class="container aLittlePadding subtitletext"> Genomic, User-Accessible Variant Annotation </div>
+            <div class ="aLittlePadding">
+                <input id="username" type="text" placeholder="email" onkeypress="check_values();">
+                <input id="password" type="password" placeholder="password" onkeypress="check_values();">
+                <input id="password2" type="password" placeholder="confirm password" onkeypress="check_values();">
+                <button id="registerButton" class="btn btn-default btn-lg homepagebutton">Make a new account</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+
+    function check_values() {
+        if ($("#username").val().length != 0 && $("#password").val().length != 0) {
+            $("#button1").removeClass("hidden").animate({ left: '250px' });;
+            $("#lock1").addClass("hidden").animate({ left: '250px' });;
+        }
+    }
+
+
+</script>
+
+
+<style>
+
+body {
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+/* unvisited link */
+a:link {
+    color: #e09999;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #e09999;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #e09999;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: #e09999;
+    text-decoration: none;
+}
+
+.subtitletext {
+    color: #84be98;
+}
+
+.translucentbackground {
+    background-color: rgb(0,0,0,0);
+    background-size: cover;
+    height: 100%;
+}
+
+.jumbotron {
+    background: url('http://upload.wikimedia.org/wikipedia/commons/b/b0/Guava_bangalore.jpg');
+    margin: auto auto;
+    background-size: cover;
+    padding: 0;
+    height: 100%;
+
+}
+
+.aLittlePadding {
+    padding-top: 10px;
+}
+
+.redborder {
+    border:2px solid #f96145;
+    border-radius:2px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: normal;
+}
+
+.colored {
+    background-color: rgba(255,255,255,0.5);
+    background-size: cover;
+    height:100%;
+}
+
+.row {
+    padding: 0px;
+}
+
+.bigicon {
+    font-size: 97px;
+    color: #f96145;
+}
+
+.contcustom {
+    text-align: center;
+    width: 400px;
+    border-radius: 0.5rem;
+    top: 75px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fbfbf9;
+    padding: 20px;
+    padding-bottom: 35px;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 17px;
+    padding: 15px;
+    background-color: #ECF4F4;
+    border-radius: 2px;
+    border: none;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ABABAB;
+}
+
+.med {
+    font-size: 27px;
+    color: white;
+}
+
+.medhidden {
+    font-size: 27px;
+    color: #f96145;
+    padding: 10px;
+    width:100%;
+}
+
+.wide {
+    background-color: #8EB7E4;
+    width: 100%;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.homepagebutton {
+    background-color: #fbfbf9;
+    color: #e09999;
+    font-size: 15;
+    border: 2px;
+    border-radius: 0.2rem;
+    border-color: #84be98;
+    border-style: solid;
+}
+
+</style>
